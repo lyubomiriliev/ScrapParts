@@ -15,7 +15,7 @@ export const BANNERS = [
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const letters = ["S", "C", "R", "A", "P"]; // Letters for animation
+  const letters = ["s", "c", "r", "a", "p"];
 
   // Variants for Framer Motion
   const letterVariants = {
