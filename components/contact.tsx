@@ -27,7 +27,7 @@ export default function Contact() {
             <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
             <p className="text-gray-400 mb-8">
               Interested in commissioning a unique piece or have questions about
-              my work? I'd love to hear from you.
+              our work? We'd love to hear from you.
             </p>
 
             <div className="space-y-6">

@@ -21,30 +21,27 @@ export default function Gallery() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.slice(0, 3).map((item) => (
-            <Card
-              key={item.id}
-              className="bg-neutral-900 border-none overflow-hidden group"
-            >
-              <CardContent className="p-0">
-                <div className="relative h-80 overflow-hidden">
-                  <Image
-                    src={item.images[0]}
-                    alt={item.title}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Link href={`/products/${item.id}`}>
+            <Link key={item.id} href={`/products/${item.id}`}>
+              <Card className="bg-neutral-900 border-none overflow-hidden group">
+                <CardContent className="p-0">
+                  <div className="relative h-80 overflow-hidden">
+                    <Image
+                      src={item.images[0]}
+                      alt={item.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <Button variant="secondary">View Details</Button>
-                    </Link>
+                    </div>
                   </div>
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold mb-1">{item.title}</h3>
-                  <p className="text-sm text-gray-400">{item.category}</p>
-                </div>
-              </CardContent>
-            </Card>
+                  <div className="p-4">
+                    <h3 className="font-semibold mb-1">{item.title}</h3>
+                    <p className="text-sm text-gray-400">{item.category}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
 
