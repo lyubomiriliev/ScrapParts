@@ -89,21 +89,28 @@ export default function Hero() {
         </div>
 
         {/* Semi-Transparent Overlay */}
-        <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+        <div className="absolute inset-0 bg-black opacity-70 z-10"></div>
 
         <div className="absolute inset-0 flex flex-col justify-center items-center z-20 text-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="py-24 sm:py-32">
-            <h1 className="text-4xl uppercase font-bold tracking-tight sm:text-6xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-neutral-50 to-neutral-100">
-              Crafting Art from Scrap
+          <div className="py-24 sm:py-32 flex flex-col justify-between text-center items-center">
+            <h1 className="text-4xl lg:text-7xl whitespace-nowrap uppercase font-bold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-zinc-400 via-zinc-100 to-zinc-400">
+              Crafting Art from
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-200 max-w-xl">
-              Discover unique sculptures crafted from recycled car parts, where
-              industrial waste transforms into stunning artistic expressions.
-              Each piece tells a story of rebirth and creativity.
+            <Image
+              src="/scrapText.png"
+              width={400}
+              height={100}
+              alt="/"
+              className="w-96 lg:w-2/3"
+            />
+            <div className="absolute top-[28%] w-60 h-60 bg-yellow-600/50 blur-3xl -z-10"></div>
+            <p className="text-lg uppercase lg:text-2xl lg:whitespace-nowrap text-gray-200">
+              Innovative Sculptures Built with Passion and Precision
             </p>
-            <div className="mt-10 flex gap-x-6">
+
+            <div className="mt-10 flex z-50 gap-x-6">
               <Link href="/products">
-                <Button size="lg" className="bg-white hover:bg-neutral-700">
+                <Button size="lg" className="">
                   View Collection
                 </Button>
               </Link>
@@ -115,21 +122,22 @@ export default function Hero() {
             </div>
 
             {/* Arrow Icons */}
-            <div className="absolute hidden md:flex w-full justify-between items-center text-3xl md:text-5xl px-4 md:px-6 text-white z-30 top-1/2 transform -translate-y-1/2">
+            <div className="absolute inset-0 w-full h-full flex justify-between items-center px-4 text-white z-30">
               <div
                 onClick={prevSlide}
-                className="w-10 h-10 border-[1px] rounded-md flex items-center justify-center hover:cursor-pointer hover:bg-gray-700 hover:text-white active:bg-gray-900 duration-300"
+                className="absolute left-0 bottom-4 transform -translate-y-1/2 w-10 h-10 border-[1px] rounded-md hidden lg:flex items-center justify-center hover:cursor-pointer hover:bg-gray-700 hover:text-white active:bg-gray-900 duration-300"
               >
                 <ArrowLeft />
               </div>
               <div
                 onClick={nextSlide}
-                className="w-10 h-10 border-[1px] rounded-md flex items-center justify-center hover:cursor-pointer hover:bg-gray-700 hover:text-white active:bg-gray-900 duration-300"
+                className="absolute right-0 bottom-4 transform -translate-y-1/2 w-10 h-10 border-[1px] rounded-md hidden lg:flex items-center justify-center hover:cursor-pointer hover:bg-gray-700 hover:text-white active:bg-gray-900 duration-300"
               >
                 <ArrowRight />
               </div>
             </div>
 
+            {/* Pagination Dots */}
             <div className="absolute w-full left-0 right-0 mx-auto flex justify-center gap-4 bottom-10 z-30 select-none">
               {BANNERS.map((_, index) => (
                 <div

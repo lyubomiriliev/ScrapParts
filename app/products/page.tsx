@@ -2,58 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-
-const products = [
-  {
-    id: 1,
-    title: "Mechanical Eagle",
-    price: "€250,00",
-    image: "/robot1.jpg",
-    category: "Wildlife",
-  },
-  {
-    id: 2,
-    title: "Industrial Dragon",
-    price: "€3,200",
-    image: "/robot2.jpg",
-    category: "Fantasy",
-  },
-  {
-    id: 3,
-    title: "Steampunk Warrior",
-    price: "€2,800",
-    image: "/robot3.jpg",
-    category: "Human Form",
-  },
-  {
-    id: 4,
-    title: "Mechanical Lion",
-    price: "€2,900",
-    image: "/robot4.jpg",
-    category: "Wildlife",
-  },
-  {
-    id: 5,
-    title: "Gear Phoenix",
-    price: "€3,500",
-    image: "/guitar2.jpg",
-    category: "Fantasy",
-  },
-  {
-    id: 6,
-    title: "Abstract Motion",
-    price: "€2,200",
-    image: "/guitar1.jpg",
-    category: "Abstract",
-  },
-];
+import { products } from "@/lib/constants";
 
 export default function ProductsPage() {
   return (
     <div className="py-16 bg-neutral-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Available Works</h1>
+          <h1 className="text-4xl font-bold mb-4">Featured Products</h1>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Each sculpture is a unique piece, handcrafted from carefully
             selected car parts. Browse through our collection of available
@@ -70,7 +26,7 @@ export default function ProductsPage() {
               <CardContent className="p-0">
                 <div className="relative h-80 overflow-hidden">
                   <Image
-                    src={product.image}
+                    src={product.images[0]}
                     alt={product.title}
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"

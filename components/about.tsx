@@ -21,8 +21,8 @@ export default function About() {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-              <Card className="bg-neutral-800 border-none">
-                <CardContent className="pt-6">
+              <Card className="bg-neutral-800 border-none flex flex-col justify-center items-center text-center">
+                <CardContent className="pt-6 flex flex-col justify-center items-center">
                   <Wrench className="h-8 w-8 mb-4 text-primary" />
                   <h3 className="font-semibold mb-2">Craftsmanship</h3>
                   <p className="text-sm text-gray-400">
@@ -31,8 +31,8 @@ export default function About() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-neutral-800 border-none">
-                <CardContent className="pt-6">
+              <Card className="bg-neutral-800 border-none flex flex-col justify-center items-center text-center">
+                <CardContent className="pt-6 flex flex-col justify-center items-center">
                   <Recycle className="h-8 w-8 mb-4 text-primary" />
                   <h3 className="font-semibold mb-2">Sustainability</h3>
                   <p className="text-sm text-gray-400">
@@ -41,8 +41,8 @@ export default function About() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-neutral-800 border-none">
-                <CardContent className="pt-6">
+              <Card className="bg-neutral-800 border-none flex flex-col justify-center items-center text-center">
+                <CardContent className="pt-6 flex flex-col justify-center items-center">
                   <Trophy className="h-8 w-8 mb-4 text-primary" />
                   <h3 className="font-semibold mb-2">Recognition</h3>
                   <p className="text-sm text-gray-400">
