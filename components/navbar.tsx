@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Wrench } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,8 +15,13 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <Wrench className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold">MetalArt</span>
+              <Image
+                width={400}
+                height={100}
+                alt="/"
+                src="/scrapFiguresLogo.png"
+                className="w-28"
+              />
             </Link>
           </div>
 
@@ -25,10 +31,16 @@ export default function Navbar() {
               <Link href="/" className="hover:text-primary transition-colors">
                 Home
               </Link>
-              <Link href="/products" className="hover:text-primary transition-colors">
+              <Link
+                href="/products"
+                className="hover:text-primary transition-colors"
+              >
                 Products
               </Link>
-              <Link href="/#gallery" className="hover:text-primary transition-colors">
+              <Link
+                href="/#gallery"
+                className="hover:text-primary transition-colors"
+              >
                 Gallery
               </Link>
               <Link href="/#contact">

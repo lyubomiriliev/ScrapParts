@@ -26,14 +26,14 @@ export default function Contact() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
             <p className="text-gray-400 mb-8">
-              Interested in commissioning a unique piece or have questions about my work?
-              I'd love to hear from you.
+              Interested in commissioning a unique piece or have questions about
+              my work? I'd love to hear from you.
             </p>
 
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <Mail className="h-5 w-5 text-primary" />
-                <span>contact@metalart.com</span>
+                <span>contact@scrapfigures.com</span>
               </div>
               <div className="flex items-center space-x-4">
                 <Phone className="h-5 w-5 text-primary" />

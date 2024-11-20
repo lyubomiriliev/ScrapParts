@@ -7,43 +7,43 @@ const products = [
   {
     id: 1,
     title: "Mechanical Eagle",
-    price: "€2,500",
-    image: "https://images.unsplash.com/photo-1612404730960-5c71577fca11?q=80&w=2940&auto=format&fit=crop",
+    price: "€250,00",
+    image: "/robot1.jpg",
     category: "Wildlife",
   },
   {
     id: 2,
     title: "Industrial Dragon",
     price: "€3,200",
-    image: "https://images.unsplash.com/photo-1597909555048-7b82d3c6ba82?q=80&w=2940&auto=format&fit=crop",
+    image: "/robot2.jpg",
     category: "Fantasy",
   },
   {
     id: 3,
     title: "Steampunk Warrior",
     price: "€2,800",
-    image: "https://images.unsplash.com/photo-1528795259021-d8c86e14354c?q=80&w=2940&auto=format&fit=crop",
+    image: "/robot3.jpg",
     category: "Human Form",
   },
   {
     id: 4,
     title: "Mechanical Lion",
     price: "€2,900",
-    image: "https://images.unsplash.com/photo-1569163139599-0f4517e36f51?q=80&w=2940&auto=format&fit=crop",
+    image: "/robot4.jpg",
     category: "Wildlife",
   },
   {
     id: 5,
     title: "Gear Phoenix",
     price: "€3,500",
-    image: "https://images.unsplash.com/photo-1547651196-2d6ed7c106ae?q=80&w=2940&auto=format&fit=crop",
+    image: "/guitar2.jpg",
     category: "Fantasy",
   },
   {
     id: 6,
     title: "Abstract Motion",
     price: "€2,200",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2940&auto=format&fit=crop",
+    image: "/guitar1.jpg",
     category: "Abstract",
   },
 ];
@@ -55,16 +55,20 @@ export default function ProductsPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Available Works</h1>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Each sculpture is a unique piece, handcrafted from carefully selected car parts.
-            Browse through our collection of available works.
+            Each sculpture is a unique piece, handcrafted from carefully
+            selected car parts. Browse through our collection of available
+            works.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product) => (
-            <Card key={product.id} className="bg-neutral-800 border-none overflow-hidden group">
+            <Card
+              key={product.id}
+              className="bg-neutral-800 border-none overflow-hidden group"
+            >
               <CardContent className="p-0">
-                <div className="relative h-80">
+                <div className="relative h-80 overflow-hidden">
                   <Image
                     src={product.image}
                     alt={product.title}
@@ -80,7 +84,9 @@ export default function ProductsPage() {
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="font-semibold text-lg">{product.title}</h3>
-                    <span className="text-primary font-medium">{product.price}</span>
+                    <span className="text-primary font-medium">
+                      {product.price}
+                    </span>
                   </div>
                   <p className="text-sm text-gray-400">{product.category}</p>
                 </div>
