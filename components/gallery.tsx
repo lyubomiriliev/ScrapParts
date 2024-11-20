@@ -35,9 +35,14 @@ export default function Gallery() {
                       <Button variant="secondary">View Details</Button>
                     </div>
                   </div>
-                  <div className="p-4">
-                    <h3 className="font-semibold mb-1">{item.title}</h3>
-                    <p className="text-sm text-gray-400">{item.category}</p>
+                  <div className="p-4 flex justify-between">
+                    <div className="flex flex-col">
+                      <h3 className="font-semibold mb-1">{item.title}</h3>
+                      <p className="text-sm text-gray-400">{item.category}</p>
+                    </div>
+                    <Button className="mt-2 lg:hidden" variant="secondary">
+                      View Details
+                    </Button>
                   </div>
                 </CardContent>
               </Card>

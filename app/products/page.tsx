@@ -41,6 +41,9 @@ export default function ProductsPage() {
                       </span>
                     </div>
                     <p className="text-sm text-gray-400">{product.category}</p>
+                    <Button className="mt-2 lg:hidden" variant="default">
+                      View Details
+                    </Button>
                   </div>
                 </CardContent>
               </Card>

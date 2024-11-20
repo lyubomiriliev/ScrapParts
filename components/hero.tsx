@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export const BANNERS = [
@@ -14,8 +15,23 @@ export const BANNERS = [
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [touchStart, setTouchStart] = useState<number | null>(null);
-  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const letters = ["S", "C", "R", "A", "P"]; // Letters for animation
+
+  // Variants for Framer Motion
+  const letterVariants = {
+    hidden: { opacity: 0, scale: 0.5, y: 50 },
+    visible: (i: number) => ({
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.1, // Add staggered delay for each letter
+        duration: 0.6,
+        type: "spring",
+        stiffness: 150,
+      },
+    }),
+  };
 
   // Handle moving to the next slide
   const nextSlide = () => {
@@ -36,40 +52,8 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
-  // Handle touch events for swipe detection
-  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-    setTouchStart(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-    const distance = touchStart - touchEnd;
-
-    // Minimum distance for swipe to be detected
-    const minSwipeDistance = 50;
-
-    if (distance > minSwipeDistance) {
-      nextSlide();
-    } else if (distance < -minSwipeDistance) {
-      prevSlide();
-    }
-
-    // Reset touch positions
-    setTouchStart(null);
-    setTouchEnd(null);
-  };
-
   return (
-    <section
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-      className="w-full flex flex-col justify-center items-center relative overflow-hidden"
-    >
+    <section className="w-full flex flex-col justify-center items-center relative overflow-hidden">
       <div className="w-full h-[650px] md:h-[95vh] relative">
         <div
           style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
@@ -96,15 +80,31 @@ export default function Hero() {
             <h1 className="text-4xl lg:text-7xl whitespace-nowrap uppercase font-bold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-zinc-400 via-zinc-100 to-zinc-400">
               Crafting Art from
             </h1>
-            <Image
-              src="/scrapText.png"
-              width={400}
-              height={100}
-              alt="/"
-              className="w-96 lg:w-2/3"
-            />
+
+            {/* Animated Text */}
+            <div className="flex -space-x-1 mt-4">
+              {letters.map((letter, index) => (
+                <motion.div
+                  key={index}
+                  custom={index} // Pass index to the variants
+                  initial="hidden"
+                  animate="visible"
+                  variants={letterVariants}
+                  className="text-7xl font-extrabold text-white"
+                >
+                  <Image
+                    src={`/${letter}.png`} // Use individual letter images
+                    alt={letter}
+                    width={70}
+                    height={70}
+                    className="w-full"
+                  />
+                </motion.div>
+              ))}
+            </div>
+
             <div className="absolute top-[28%] w-60 h-60 bg-yellow-600/50 blur-3xl -z-10"></div>
-            <p className="text-lg uppercase lg:text-2xl lg:whitespace-nowrap text-gray-200">
+            <p className="text-lg uppercase lg:text-2xl lg:whitespace-nowrap text-gray-200 mt-6">
               Innovative Sculptures Built with Passion and Precision
             </p>
 
