@@ -26,7 +26,7 @@ export default function About() {
                   <Wrench className="h-8 w-8 mb-4 text-primary" />
                   <h3 className="font-semibold mb-2">Craftsmanship</h3>
                   <p className="text-sm text-gray-400">
-                    Meticulous attention to detail in every piece
+                    Attention to detail in every piece
                   </p>
                 </CardContent>
               </Card>

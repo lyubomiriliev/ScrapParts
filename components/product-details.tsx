@@ -101,11 +101,11 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
                 className="object-cover rounded-lg"
               />
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-3 gap-4">
               {product.images.slice(1).map((image, index) => (
                 <div
                   key={index}
-                  className="relative h-[200px] cursor-pointer"
+                  className="relative h-[100px] cursor-pointer"
                   onClick={() => openModal(index + 1)}
                 >
                   <Image

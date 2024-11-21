@@ -82,7 +82,7 @@ export default function Hero() {
             </h1>
 
             {/* Animated Text */}
-            <div className="flex -space-x-1 mt-4">
+            <div className="w-full flex -space-x-1 lg:-space-x-32 justify-center items-center mt-4">
               {letters.map((letter, index) => (
                 <motion.div
                   key={index}
@@ -90,14 +90,14 @@ export default function Hero() {
                   initial="hidden"
                   animate="visible"
                   variants={letterVariants}
-                  className="text-7xl font-extrabold text-white"
+                  className="text-7xl flex justify-center items-center font-extrabold text-white"
                 >
                   <Image
                     src={`/${letter}.png`} // Use individual letter images
                     alt={letter}
                     width={70}
                     height={70}
-                    className="w-full"
+                    className="w-full lg:w-2/3"
                   />
                 </motion.div>
               ))}
