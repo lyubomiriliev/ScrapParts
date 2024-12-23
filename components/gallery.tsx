@@ -9,7 +9,7 @@ export default function Gallery() {
     <section className="py-16 bg-neutral-950" id="gallery">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl lg:text-6xl font-bold mb-4">GALLERY</h2>
+          <h2 className="text-5xl lg:text-6xl font-bold mb-4">GALLERY</h2>
           <p className="text-gray-400 max-w-4xl mx-auto">
             Explore our collection of one-of-a-kind sculptures, each forged from
             reclaimed car parts. From gears to chains, nuts to bearings – these
