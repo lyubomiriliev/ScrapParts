@@ -55,6 +55,7 @@ export default function Navbar() {
               <Link href="/#contact">
                 <Button variant="secondary">Contact</Button>
               </Link>
+              <Button variant="ghost">EN | BG</Button>
             </div>
           </div>
 
