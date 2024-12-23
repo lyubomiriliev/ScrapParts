@@ -107,10 +107,10 @@ export const exhibitions = [
   },
   {
     id: 2,
-    title: "Berlin Art Gallery",
-    place: "Berlin, DE",
+    title: "Sofia Ring Tower",
+    place: "Sofia, BG",
     date: "11.01.2025",
-    img: "/berlin.jpg",
+    img: "/ring.webp",
   },
   {
     id: 3,
@@ -135,9 +135,9 @@ export const exhibitions = [
   },
   {
     id: 6,
-    title: "Sofia Art Gallery",
-    place: "Sofia, BG",
+    title: "Grand Hotel Therme",
+    place: "Banya, BG",
     date: "09.02.2025",
-    img: "/sofia.jpeg",
+    img: "/therme.webp",
   },
 ];

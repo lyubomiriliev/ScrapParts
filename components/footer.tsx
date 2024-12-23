@@ -103,9 +103,9 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Help and Information</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>About us</li>
-              <li>Shipping Policy</li>
+              <li>GDPR</li>
               <li>Refund policy</li>
+              <li>Shipping Policy</li>
               <li>Terms & conditions</li>
               <li>Privacy & cookie policy</li>
             </ul>

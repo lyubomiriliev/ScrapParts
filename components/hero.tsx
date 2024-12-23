@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { containerVariants, titleVariant } from "@/lib/animations";
 
 export const BANNERS = [
   "/robotBanner3.jpg",
@@ -77,9 +78,14 @@ export default function Hero() {
 
         <div className="absolute inset-0 flex flex-col justify-center items-center z-20 text-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="py-24 sm:py-32 flex flex-col justify-between text-center items-center">
-            <h1 className="text-4xl lg:text-7xl whitespace-nowrap uppercase font-bold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-zinc-400 via-zinc-100 to-zinc-400">
+            <motion.h1
+              initial="hidden"
+              animate="show"
+              variants={titleVariant}
+              className="text-4xl lg:text-7xl whitespace-nowrap uppercase font-bold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-zinc-400 via-zinc-100 to-zinc-400"
+            >
               Crafting Art from
-            </h1>
+            </motion.h1>
 
             {/* Animated Text */}
             <div className="w-full flex -space-x-1 lg:-space-x-32 justify-center items-center mt-4">
@@ -104,11 +110,21 @@ export default function Hero() {
             </div>
 
             <div className="absolute top-[28%] w-60 h-60 bg-yellow-600/50 blur-3xl -z-10"></div>
-            <p className="text-lg uppercase lg:text-2xl lg:whitespace-nowrap text-gray-200 mt-6">
+            <motion.p
+              initial="hidden"
+              animate="show"
+              variants={titleVariant}
+              className="text-lg uppercase lg:text-2xl lg:whitespace-nowrap text-gray-200 mt-6"
+            >
               Innovative Sculptures Built with Passion and Precision
-            </p>
+            </motion.p>
 
-            <div className="mt-10 flex z-50 gap-x-6">
+            <motion.div
+              initial="hidden"
+              animate="show"
+              variants={containerVariants}
+              className="mt-10 flex z-50 gap-x-6"
+            >
               <Link href="/products">
                 <Button size="lg" className="">
                   View Collection
@@ -119,7 +135,7 @@ export default function Hero() {
                   Contact Artist
                 </Button>
               </Link>
-            </div>
+            </motion.div>
 
             {/* Arrow Icons */}
             <div className="absolute inset-0 w-full h-full flex justify-between items-center px-4 text-white z-30">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -8,7 +8,14 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import { FaFacebookF } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 
+import { motion } from "framer-motion";
+import { containerVariants } from "@/lib/animations";
+import { useInView } from "@/hooks/useInView";
+
 export default function Contact() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const hasBeenInView = useInView(sectionRef, { threshold: 0.25 }); // Trigger when 25% of the section is visible
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,8 +29,13 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-16 bg-neutral-900" id="contact">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section ref={sectionRef} className="py-16 bg-neutral-900" id="contact">
+      <motion.div
+        initial="hidden"
+        animate={hasBeenInView ? "show" : "hide"}
+        variants={containerVariants}
+        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
@@ -108,7 +120,7 @@ export default function Contact() {
             </form>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
