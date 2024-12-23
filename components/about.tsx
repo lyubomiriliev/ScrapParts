@@ -8,7 +8,12 @@ export default function About() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-bold mb-6">About the Craftsman</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              About the{" "}
+              <span className="text-4xl lg:text-7xl whitespace-nowrap font-bold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-zinc-400 via-zinc-100 to-zinc-400">
+                Craftsman
+              </span>
+            </h2>
             <p className="text-gray-400 mb-6">
               Behind every piece of scrap metal lies a vision. Our artist
               transforms rusted car parts into exquisite works of art, blending
@@ -19,6 +24,15 @@ export default function About() {
               unlikely materials can be turned into objects of beauty and
               inspiration.
             </p>
+
+            <div className="relative flex lg:hidden h-[600px]">
+              <Image
+                src="/avatarImage.jpg"
+                alt="Artist at work"
+                fill
+                className="object-cover rounded-2xl"
+              />
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
               <Card className="bg-neutral-800 border-none flex flex-col justify-center items-center text-center">
@@ -53,7 +67,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="relative h-[600px]">
+          <div className="hidden lg:flex relative h-[600px]">
             <Image
               src="/avatarImage.jpg"
               alt="Artist at work"

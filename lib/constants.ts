@@ -96,3 +96,48 @@ export const products = [
     images: ["/guitar1.jpg", "/guitar2.jpg", "/guitar3.jpg", "/guitar4.jpg"],
   },
 ];
+
+export const exhibitions = [
+  {
+    id: 1,
+    title: "London Gallery",
+    place: "London, UK",
+    date: "04.01.2025",
+    img: "/london.webp",
+  },
+  {
+    id: 2,
+    title: "Berlin Art Gallery",
+    place: "Berlin, DE",
+    date: "04.01.2025",
+    img: "/berlin.jpg",
+  },
+  {
+    id: 3,
+    title: "Paris Art Gallery",
+    place: "Paris, FR",
+    date: "04.01.2025",
+    img: "/paris.jpg",
+  },
+  {
+    id: 4,
+    title: "New York Art Gallery",
+    place: "New York, USA",
+    date: "04.01.2025",
+    img: "/ny.webp",
+  },
+  {
+    id: 5,
+    title: "Istanbul Art Gallery",
+    place: "Istanbul, TR",
+    date: "04.01.2025",
+    img: "/istanbul.webp",
+  },
+  {
+    id: 6,
+    title: "Sofia Art Gallery",
+    place: "Sofia, BG",
+    date: "04.01.2025",
+    img: "/sofia.jpeg",
+  },
+];

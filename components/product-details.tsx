@@ -8,6 +8,10 @@ import { ArrowLeft, ArrowRight, Share2, X } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
+import { CiCalendarDate } from "react-icons/ci";
+import { MdOutlineLocalShipping } from "react-icons/md";
+import { FaLocationCrosshairs } from "react-icons/fa6";
+
 interface Product {
   title: string;
   price: string;
@@ -23,9 +27,22 @@ interface ProductDetailsProps {
   product: Product | undefined;
 }
 
+const calculateDeliveryDate = () => {
+  const deliveryDate = new Date();
+  deliveryDate.setDate(deliveryDate.getDate() + 3);
+
+  const day = deliveryDate.getDate();
+  const month = deliveryDate.toLocaleDateString("default", { month: "long" });
+  const year = deliveryDate.getFullYear();
+
+  return `${day} ${month}`;
+};
+
 export default function ProductDetails({ product }: ProductDetailsProps) {
   const [isModalOpen, setModalOpen] = useState(false);
   const [modalImageIndex, setModalImageIndex] = useState<number>(0);
+
+  const deliveryDate = calculateDeliveryDate();
 
   if (!product) {
     return (
@@ -152,10 +169,29 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
                 ))}
               </div>
             </div>
-
             <p className="text-gray-400 mb-8">{product.description}</p>
 
-            <div className="flex space-x-4">
+            <div className="w-full flex flex-col py-2">
+              <h2 className="font-semibold mb-4">
+                Shipping and return policies
+              </h2>
+              <div className="flex flex-col">
+                <div className="flex items-center gap-3">
+                  <CiCalendarDate />
+                  Order today and get by {deliveryDate}
+                </div>
+                <div className="flex items-center gap-3">
+                  <MdOutlineLocalShipping />
+                  Free shipping over €200
+                </div>
+                <div className="flex items-center gap-3">
+                  <FaLocationCrosshairs />
+                  Ships from:<span className="font-bold">Bulgaria</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex space-x-4 mt-8">
               <Button className="flex-1">Request Purchase</Button>
               <Button variant="outline" size="icon">
                 <Share2 className="h-4 w-4" />

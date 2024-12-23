@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { FaFacebookF } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -42,6 +44,26 @@ export default function Contact() {
               <div className="flex items-center space-x-4">
                 <MapPin className="h-5 w-5 text-primary" />
                 <span>Sofia, Bulgaria</span>
+              </div>
+              <div className="flex items-center space-x-4">
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  <FaFacebookF className="scale-150" />
+                </a>
+                <h3>/ scrapfigures</h3>
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  <RiInstagramFill className="scale-150" />
+                </a>
+                <h3>/ scrapfigures.art</h3>
               </div>
             </div>
           </div>

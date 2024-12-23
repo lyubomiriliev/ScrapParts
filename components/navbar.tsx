@@ -28,20 +28,29 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
-              <Link href="/" className="hover:text-primary transition-colors">
-                Home
-              </Link>
               <Link
-                href="/products"
+                href="/#about"
                 className="hover:text-primary transition-colors"
               >
-                Products
+                About
               </Link>
               <Link
                 href="/#gallery"
                 className="hover:text-primary transition-colors"
               >
                 Gallery
+              </Link>
+              <Link
+                href="/products"
+                className="hover:text-primary transition-colors"
+              >
+                Shop
+              </Link>
+              <Link
+                href="/#exhibitions"
+                className="hover:text-primary transition-colors"
+              >
+                Exhibitions
               </Link>
               <Link href="/#contact">
                 <Button variant="secondary">Contact</Button>
@@ -71,18 +80,11 @@ export default function Navbar() {
         <div className="md:hidden">
           <div className="space-y-1 px-4 pb-3 pt-2">
             <Link
-              href="/"
+              href="/#about"
               className="block px-3 py-2 hover:bg-accent rounded-md"
               onClick={() => setIsOpen(false)}
             >
-              Home
-            </Link>
-            <Link
-              href="/products"
-              className="block px-3 py-2 hover:bg-accent rounded-md"
-              onClick={() => setIsOpen(false)}
-            >
-              Products
+              About
             </Link>
             <Link
               href="/#gallery"
@@ -90,6 +92,20 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Gallery
+            </Link>
+            <Link
+              href="/products"
+              className="block px-3 py-2 hover:bg-accent rounded-md"
+              onClick={() => setIsOpen(false)}
+            >
+              Shop
+            </Link>
+            <Link
+              href="/#exhibitions"
+              className="block px-3 py-2 hover:bg-accent rounded-md"
+              onClick={() => setIsOpen(false)}
+            >
+              Exhibitions
             </Link>
             <Link
               href="/#contact"

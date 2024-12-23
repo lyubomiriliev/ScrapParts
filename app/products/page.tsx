@@ -9,7 +9,7 @@ export default function ProductsPage() {
     <div className="py-16 bg-neutral-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Featured Products</h1>
+          <h1 className="text-7xl font-bold mb-4">Featured Products</h1>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Each sculpture is a unique piece, handcrafted from carefully
             selected car parts. Browse through our collection of available
