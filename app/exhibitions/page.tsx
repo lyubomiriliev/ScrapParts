@@ -53,7 +53,7 @@ export default function ExhibitionsPage() {
                         src={exhibition.img}
                         alt={exhibition.place}
                         fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        className="object-cover cursor-pointer transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
                   </CardContent>

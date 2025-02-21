@@ -141,3 +141,29 @@ export const exhibitions = [
     img: "/therme.webp",
   },
 ];
+
+export const news = [
+  {
+    id: 1,
+    title: "Exhibition at Grand Hotel Therme - Banya",
+    content:
+      "Experience an extraordinary exhibition of handcrafted sculptures made from scrap and salvaged parts, showcasing the beauty of transformation and artistic ingenuity. Hosted in the luxurious Grand Hotel Therme in Banya, this unique collection blends industrial aesthetics with creativity, turning discarded materials into breathtaking works of art. Each sculpture tells a story of renewal, precision, and craftsmanship, offering visitors a rare glimpse into the artistry of repurposed materials. Immerse yourself in a world where metal and imagination collide, bringing life to stunning, one-of-a-kind masterpieces",
+    place: "Banya, Bulgaria",
+    date: "21.02.2025 - Present",
+    images: ["news1.jpg", "news2.jpg"],
+  },
+  // {
+  //   id: 2,
+  //   title: "Grand Hotel Therme",
+  //   place: "Banya, Bulgaria",
+  //   date: "21.02.2025 - Present",
+  //   images: ["news1.jpg", "news2.jpg"],
+  // },
+  // {
+  //   id: 3,
+  //   title: "Grand Hotel Therme",
+  //   place: "Banya, Bulgaria",
+  //   date: "21.02.2025 - Present",
+  //   images: ["news1.jpg", "news2.jpg"],
+  // },
+];
