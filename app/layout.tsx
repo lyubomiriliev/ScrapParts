@@ -15,11 +15,11 @@ export const metadata: Metadata = {
     title: "Metal Art Gallery | Unique Scrap Metal Sculptures",
     description:
       "Discover unique metal sculptures crafted from car parts by a Bulgarian artisan. Each piece tells a story through recycled automotive elements.",
-    images: [], // Setting empty images to prevent preview
+    images: ["data:image/gif;base64,R0lGODlhAQABAAAAACw="], // Blank transparent image
   },
   twitter: {
     card: "summary",
-    images: [], // Prevents Twitter from showing an image preview
+    images: ["data:image/gif;base64,R0lGODlhAQABAAAAACw="], // Prevents image previews
   },
 };
 
