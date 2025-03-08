@@ -80,3 +80,38 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Set the width of the scrollbar */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Optional: style the track (background area of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #555555;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  /* Adding a pulse animation */
+  animation: thumbPulse 1.5s infinite;
+}
+
+/* Change color on hover for a sleek interactive feel */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #333;
+}
+
+/* Define the keyframes for the pulse animation */
+@keyframes thumbPulse {
+  0%,
+  100% {
+    background-color: black;
+  }
+  50% {
+    background-color: #444;
+  }
+}

@@ -26,17 +26,40 @@ export default function About() {
             animate={hasBeenInView ? "show" : "hidden"}
             variants={containerVariants}
           >
-            <motion.div variants={itemVariants} className="flex flex-col">
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6">About me</h2>
-              <p className="text-gray-400 mb-6">
-                Behind every piece of scrap metal lies a vision. Our artist
-                transforms rusted car parts into exquisite works of art,
-                blending engineering precision with a creative spirit. With an
-                eye for innovation and a dedication to quality, each sculpture
-                is crafted to perfection, ensuring that every piece is not just
-                a creation but a masterpiece. Our mission is to show that even
-                the most unlikely materials can be turned into objects of beauty
-                and inspiration.
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-col h-80 overflow-y-scroll"
+            >
+              <h2 className="text-4xl lg:text-5xl font-bold mb-5">
+                За артиста
+              </h2>
+              <p className="text-gray-400 py-4">
+                Асен Тодоров е артист със смел почерк, който превръща стари
+                авточасти и метални елементи в изкуство с характер, което светът
+                не е виждал. Роден през 1977 г. В София, той се занимава с
+                рисуване и изкуство от дете, но преди 28 години започва да
+                експериментира по-целенасочено, превръщайки хобито си в истинска
+                творческа мисия.
+              </p>
+              <p className="text-gray-400 py-4">
+                Определя стила си като „гаражно изкуство“ – неподчинено на
+                строги правила, водено от интуицията и усещането за материалите.
+                Работата му не следва шаблони, а се движи по естествения ритъм
+                на въображението, надхвърляйки всички рамки, което прави всяка
+                негова творба уникална и жива.
+              </p>
+              <p className="text-gray-400 py-4">
+                Днес неговите произведения са търсени от ценители по цял свят.
+                Всяка негова творба е свидетелство за това, че дори изоставените
+                материали могат да бъдат преобразени в нещо необикновено - стига
+                да попаднат в ръцете на истински творец, който вижда отвъд
+                обикновеното
+              </p>
+              <p className="text-gray-400 py-4">
+                Всяко произведение на Асен Тодоров носи духа на трансформацията.
+                Творбите му са повече от скулптури – те са проява на свобода,
+                въображение и неподправена енергия, която предизвиква и
+                вдъхновява.
               </p>
             </motion.div>
             <motion.div
@@ -93,8 +116,8 @@ export default function About() {
             className="hidden lg:flex relative h-[600px]"
           >
             <Image
-              src="/avatarImage.jpg"
-              alt="Artist at work"
+              src="/asen.jpg"
+              alt="Asen Todorov"
               fill
               className="object-cover rounded-2xl"
             />
