@@ -36,15 +36,15 @@ const NewsSection = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
             {news.map((n) => (
               <motion.div variants={titleVariant}>
-                <Card className="bg-neutral-800 border-none overflow-hidden group p-8 relative">
-                  <h1 className="text-xl text-center lg:text-2xl py-2">
+                <Card className="bg-neutral-800 flex flex-col justify-center items-center w-full border-none overflow-hidden group p-8 relative">
+                  <h1 className="text-xl text-center lg:text-2xl py-2 mt-14 md:mt-0 lg:mt-0">
                     {n.title}
                   </h1>
-                  <p className="py-10">{n.content}</p>
-                  <div className="w-full flex items-center gap-4">
+                  <p className="p-6">{n.content}</p>
+                  <div className="w-full gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                     {n.images.map((img) => (
                       <div className="relative overflow-hidden">
                         <Image
