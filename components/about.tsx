@@ -69,8 +69,8 @@ export default function About() {
               className="relative flex lg:hidden h-[600px]"
             >
               <Image
-                src="/avatarImage.jpg"
-                alt="Artist at work"
+                src="/asen.jpg"
+                alt="Asen Todorov"
                 fill
                 className="object-cover rounded-2xl"
               />
