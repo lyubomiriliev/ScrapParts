@@ -47,7 +47,7 @@ export default function Contact() {
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <Mail className="h-5 w-5 text-primary" />
-                <span>contact@scrapfigures.com</span>
+                <span>contact@atart.bg</span>
               </div>
               <div className="flex items-center space-x-4">
                 <Phone className="h-5 w-5 text-primary" />
@@ -66,7 +66,7 @@ export default function Contact() {
                 >
                   <FaFacebookF className="scale-150" />
                 </a>
-                <h3>/ scrapfigures</h3>
+                <h3>/ atart</h3>
                 <a
                   href="https://www.instagram.com/"
                   target="_blank"
@@ -75,7 +75,7 @@ export default function Contact() {
                 >
                   <RiInstagramFill className="scale-150" />
                 </a>
-                <h3>/ scrapfigures.art</h3>
+                <h3>/ at.art</h3>
               </div>
             </div>
           </div>

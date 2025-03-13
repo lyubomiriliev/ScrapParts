@@ -19,7 +19,7 @@ export default function Navbar() {
                 width={400}
                 height={100}
                 alt="/"
-                src="/scrapFiguresLogo.png"
+                src="/AtArtLogoWhite.svg"
                 className="w-28"
               />
             </Link>
@@ -55,7 +55,11 @@ export default function Navbar() {
               <Link href="/#contact">
                 <Button variant="secondary">Contact</Button>
               </Link>
-              <Button variant="ghost">EN | BG</Button>
+              <div className="flex items-center ">
+                <Button variant="ghost">EN</Button>
+                <div>|</div>
+                <Button variant="ghost">BG</Button>
+              </div>
             </div>
           </div>
 

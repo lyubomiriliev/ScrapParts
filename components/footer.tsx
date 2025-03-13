@@ -14,7 +14,7 @@ export default function Footer() {
                 width={400}
                 height={100}
                 alt="/"
-                src="/scrapFiguresLogo.png"
+                src="/AtArtLogoWhite.svg"
                 className="w-40"
               />
             </Link>
@@ -75,7 +75,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>Sofia, Bulgaria</li>
               <li>+359 888 123 456</li>
-              <li>contact@scrapfigures.com</li>
+              <li>contact@atart.bg</li>
               <a
                 href="https://www.facebook.com/"
                 target="_blank"
@@ -84,7 +84,7 @@ export default function Footer() {
               >
                 <div className="flex items-center gap-3">
                   <FaFacebookF className="scale-150" />
-                  <li>scrap-figures</li>
+                  <li>at-art</li>
                 </div>
               </a>
               <a
@@ -95,7 +95,7 @@ export default function Footer() {
               >
                 <div className="flex items-center gap-3">
                   <RiInstagramFill className="scale-150" />
-                  <li>scrap-figures</li>
+                  <li>at-art</li>
                 </div>
               </a>
             </ul>
@@ -113,11 +113,11 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-neutral-800 text-center text-sm text-gray-400">
-          <p>© {new Date().getFullYear()} ScrapFigures. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} AtArt. All rights reserved.</p>
           <p>
             Website created by{" "}
             <a
-              href="https://lyubomir-iliev-portfolio.vercel.app/"
+              href="https://lyubomir-iliev.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-yellow-600 underline"

@@ -18,7 +18,7 @@ export default function About() {
   const hasBeenInView = useInView(sectionRef, { threshold: 0.25 }); // Trigger when 25% of the section is visible
 
   return (
-    <section ref={sectionRef} className="py-16 bg-neutral-900" id="about">
+    <section ref={sectionRef} className="py-6 bg-neutral-900" id="about">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -28,11 +28,9 @@ export default function About() {
           >
             <motion.div
               variants={itemVariants}
-              className="flex flex-col h-80 overflow-y-scroll"
+              className="flex flex-col h-80 mb-5 overflow-y-scroll"
             >
-              <h2 className="text-4xl lg:text-5xl font-bold mb-5">
-                За артиста
-              </h2>
+              <h2 className="text-4xl lg:text-5xl font-bold">За артиста</h2>
               <p className="text-gray-400 py-4">
                 Асен Тодоров е артист със смел почерк, който превръща стари
                 авточасти и метални елементи в изкуство с характер, което светът
